@@ -1,5 +1,13 @@
+import { SideNav } from "./components/ui/SideNav";
+
 export default function Home() {
   return (
-    <div>salve...</div>
+    <main className="flex">
+      <SideNav />
+
+      <div className="p-4">
+        salve...
+      </div>
+    </main>
   );
 }
