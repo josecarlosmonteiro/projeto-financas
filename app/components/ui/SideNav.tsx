@@ -8,7 +8,7 @@ type NavLinkProps = {
 
 const NavLink = ({ label, href }: NavLinkProps) => {
   return (
-    <Link href={href} className="p-3 px-8 duration-200 hover:bg-white hover:bg-opacity-10">
+    <Link href={href} className="p-3 px-8 duration-200 hover:bg-black hover:bg-opacity-20">
       {label}
     </Link>
   )
@@ -21,7 +21,7 @@ export function SideNav() {
   ];
 
   return (
-    <nav className="h-screen flex flex-col text-sm bg-slate-700 text-white">
+    <nav className="h-screen w-1/4 flex flex-col text-sm bg-slate-300">
       {
         links.map(link => (
           <NavLink key={link.label} href={link.href} label={link.label} />

@@ -1,6 +1,8 @@
-import { SideNav } from "@/app/components/ui/SideNav";
+import { MonthlyPlanning } from "@/app/components/MonthlyPlanning/MonthlyPlanning";
+import { NewMonthlyPlanningForm } from "@/app/components/MonthlyPlanning/MonthlyPlanning/NewMonthlyPlanningForm";
+import { MonthlyStatement } from "@/app/components/MonthlyPlanning/MonthlyStatement";
 
-type Props = {
+interface Props {
   params: {
     month: number;
     year: number;
@@ -9,16 +11,17 @@ type Props = {
 
 export default function PlanningFixedReleasesPage({ params: { month, year } }: Props) {
   return (
-    <main className="flex">
-      <SideNav />
+    <main>
+      <h1 className="text-2xl font-semibold">Planejamento mensal - {month}/{year}</h1>
+      <hr /><br />
 
-      <div className="p-4">
-        <div>
-          <strong>{month}/{year}</strong>
-        </div>
+      <MonthlyStatement />
+      <br />
 
-        fixed releases page...
-      </div>
+      <NewMonthlyPlanningForm />
+      <br />
+
+      <MonthlyPlanning />
     </main>
   );
 }
